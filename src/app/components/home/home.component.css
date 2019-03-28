@@ -1,0 +1,113 @@
+.main-body
+{
+  height: 75vh;
+  display: flex;
+}
+.hire-section
+{
+  flex: 50%;
+  text-align: center;
+  background:linear-gradient(rgba(0,255,0,0.4),rgba(0,255,0,0.4)),url('../pictures/hire.jpeg') center center no-repeat;
+}
+.work-section
+{
+  flex:50%;
+  text-align: center;
+  background: linear-gradient(rgba(255,0,0,0.4),rgba(255,0,0,0.4)),url('../pictures/work.jpg') center center no-repeat;
+}
+.button-section
+{
+  padding-top: 25vh;
+}
+.button-section-2
+{
+  padding-top: 25vh;
+}
+.aboutus
+{
+  text-align: center;
+  background: black;
+  color: white;
+}
+.aboutus h3
+{
+   text-align: center;
+   padding-top: 6vh;
+   padding-bottom: 6vh;
+}
+.aboutus p
+{
+  text-align: left;
+  padding-bottom: 6vh;
+}
+.contact
+{
+  display: flex;
+  height: 45vh;
+}
+.contact-image
+{
+  flex:50%;
+
+}
+.contact-image img
+{
+  height:75vh;
+  width: 105vh;
+
+}
+.contact-form
+{
+  flex: 50%;
+}
+.contact-form h3
+{
+  text-align: center;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+}
+#footer
+{
+  margin-top: 35vh;
+  background: black;
+}
+#footer h5
+{
+  text-align: center;
+  color: white;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+}
+#footer h4
+{
+  color: white;
+  text-align: center;
+  padding-top: 4.5vh;
+}
+#footer p
+{
+  color: white;
+  text-align: center;
+}
+#footer i
+{
+  height: 0.5vh;
+}
+.social-media a:hover
+{
+  color:red;
+}
+.company-profile ul
+{
+  padding-top: 8.5vh;
+  padding-bottom: 4.5vh;
+}
+.social-media ul
+{
+  padding-top: 2.5vh;
+  padding-bottom: 4.5vh;
+}
+.social-media li
+{
+  margin-right: 2.5vh;
+}
