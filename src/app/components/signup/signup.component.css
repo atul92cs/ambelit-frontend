@@ -1,0 +1,75 @@
+.form-section
+{
+  margin-top: 20vh;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-right: 4vh;
+  margin-left: 4vh;
+  margin-bottom: 20vh;
+}
+.form-section h3
+{
+  text-align: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+.form-section form
+{
+  padding: 2.5vh 2.5vh 2.5vh 2.5vh;
+}
+.list-section
+{
+  margin-top: 20vh;
+}
+.list-section h4
+{
+  text-align: center;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+}
+
+#footer
+{
+  margin-top: 2vh;
+  background: black;
+}
+#footer h5
+{
+  text-align: center;
+  color: white;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+}
+#footer h4
+{
+  color: white;
+  text-align: center;
+  padding-top: 4.5vh;
+}
+#footer p
+{
+  color: white;
+  text-align: center;
+}
+#footer i
+{
+  height: 0.5vh;
+}
+.social-media a:hover
+{
+  color:red;
+}
+.company-profile ul
+{
+  padding-top: 8.5vh;
+  padding-bottom: 4.5vh;
+}
+.social-media ul
+{
+  padding-top: 2.5vh;
+  padding-bottom: 4.5vh;
+}
+.social-media li
+{
+  margin-right: 2.5vh;
+}
