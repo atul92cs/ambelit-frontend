@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from '@angular/router';
+import {LoginService} from'../../services/login.service';
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private service:LoginService) {
+
+   }
 
   ngOnInit() {
   }
-
+   logout()
+   {
+     this.service.logout();
+  this.router.navigate(['/login']);
+   }
 }

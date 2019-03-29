@@ -18,9 +18,9 @@ export class SignupComponent implements OnInit {
    createForm()
    {
      this.registerForm=this.formBuilder.group({
-       name:['',Validators.required],
-       email:['',Validators.required],
-       password:['',Validators.required]
+       name:[null,Validators.required,Validators.pattern(/^[A-Za-z\s]+$/)],
+       email:[null,Validators.required, Validators.pattern(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)],
+       password:[null,Validators.required]
      });
    }
    resetForm()
@@ -29,7 +29,10 @@ export class SignupComponent implements OnInit {
    }
    registerUser(name,email,password)
    {
-
+        if(name.invalid||email.invalid||password.invalid)
+        {
+          this.message="invalid details"
+        }
        this.service.registerUser(name,email,password).subscribe(res=>{
 
             this.message="User registered";

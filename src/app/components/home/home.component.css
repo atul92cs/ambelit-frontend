@@ -111,3 +111,7 @@
 {
   margin-right: 2.5vh;
 }
+.nav-link
+{
+  cursor: pointer;
+}
