@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import {Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
-import {Loginservice} from '../services/login.service';
+import {LoginService} from '../services/login.service';
 @Injectable({
   providedIn: 'root'
 })
 export class LoginGuard implements CanActivate {
   constructor(private service:Loginservice,router:Router)
+  {
+
+  }
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot) {
@@ -15,7 +18,7 @@ export class LoginGuard implements CanActivate {
     {
       return true;
     }
-    this.router.navigate(['/.login'],{queryParams:{returnUrl:state.url}});
+    this.router.navigate(['/login'],{queryParams:{returnUrl:state.url}});
     return false;
   }
 }
