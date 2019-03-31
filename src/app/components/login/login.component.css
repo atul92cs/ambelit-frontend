@@ -10,27 +10,28 @@ h3
 }
 #footer
 {
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 .company-profile li
 {
   style:none;
-  text-align: center;
+
 }
 .company-profile ul
 {
 list-style-type: none;
 padding-top: 4.5vh;
+text-align: center;
 }
 #footer h4
 {
-  text-align: center;
+  text-align:center;
   padding-bottom:0.5vh;
 
 }
 .social-media ul
 {
-  margin-left: 12vh;
+  margin-left: 27vh;
 }
 .social-media li
 {
