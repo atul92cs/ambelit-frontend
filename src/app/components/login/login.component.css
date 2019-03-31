@@ -8,3 +8,31 @@ h3
   margin-top: 3vh;
   margin-bottom: 3vh;
 }
+#footer
+{
+  margin-top: 10vh;
+}
+.company-profile li
+{
+  style:none;
+  text-align: center;
+}
+.company-profile ul
+{
+list-style-type: none;
+padding-top: 4.5vh;
+}
+#footer h4
+{
+  text-align: center;
+  padding-bottom:0.5vh;
+
+}
+.social-media ul
+{
+  margin-left: 12vh;
+}
+.social-media li
+{
+  margin-right: 2vh;
+}
