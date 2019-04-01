@@ -2,3 +2,40 @@
 {
   cursor: pointer;
 }
+.profile-section img
+{
+  height: 45vh;
+  width: 35vh;
+  border-radius:35vh;
+  padding-top: 2vh;
+  margin-left: 12vh;
+}
+.profile-section h3
+{
+  font-size: 1.5em;
+  text-align: center;
+}
+.profile-section h4
+{
+  font-size: 1.5em;
+  text-align :center;
+}
+.profile-section h5
+{
+  font-size: 1.5em;
+  text-align :center;
+}
+.profile-section
+{
+  border-radius: 5px ;
+  margin-top: 5vh;
+  margin-left: 5vh;
+  border: 1px solid;
+}
+.profile-section ul
+{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
