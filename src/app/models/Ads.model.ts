@@ -1,4 +1,4 @@
-export class Ads{
+export class UserAds{
   Userid:number;
   id:number;
   Date:string;

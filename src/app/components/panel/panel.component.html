@@ -33,15 +33,70 @@
         </ul>
       </div>
     </div>
-    <div class="col-md-4 col-xs-12 col-sm-12">
-      <div class="message-section">
-      
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-12 col-xs-12">
-      <div class="ads-section">
+    <div class="col-md-8 col-xs-12 col-sm-12">
+           <h3>Your Ads</h3>
+      <div class="ad-section" *ngFor="let data of ads?.result">
 
+       <div class="card">
+         <div class="row no-gutters">
+           <div class="col-md-7">
+             <img [src]="data.Picture" alt="">
+           </div>
+           <div class="col-md-5">
+             <div class="card-body">
+
+              <label for="card-title">Title</label>
+             <p class="card-title">{{data.Title}} (#{{data.id}})</p>
+             <label for="card-text">Content</label>
+             <p class="card-text">{{data.Content}}</p>
+             <label for="classification">Category/Sub-category</label>
+             <p class="card-text"> <small class="classification">{{data.Category}}/{{data.Subcategory}}</small></p>
+             <label for="status">Status</label>
+             <p class="card-text"> <small class="status">{{data.Status}}</small></p>
+             <button type="button" class="btn btn-primary" name="button">Update</button> &nbsp; <button type="button" class="btn btn-danger" name="button">Delete</button>
+            </div>
+           </div>
+         </div>
+       </div>
       </div>
     </div>
   </div>
 </div>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+
+
+    <div class="col-md-4 col-xs-12 col-sm-12">
+      <div class="company-profile">
+
+
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-dark">Terms & conditions</li>
+        <li class="list-group-item list-group-item-dark">Privacy policy</li>
+        <li class="list-group-item list-group-item-dark">About the company</li>
+      </ul>
+
+    </div>
+    </div>
+    <div class="col-md-4 col-xs-12 col-sm-12">
+
+    </div>
+    <div class="col-md-4 col-cs-12 col-sm-12">
+      <h4>Follow Us</h4>
+      <div class="social-media">
+
+
+      <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item "><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+        <li class="list-group-item "><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+          <li class="list-group-item "><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+          <li class="list-group-item"><a href="#"><i class="fab fa-linkedin fa-2x"></i></a></li>
+      </ul>
+            </div>
+      <h5>&copy;Amberlit</h5>
+      <p >Design and developed by Hth</p>
+    </div>
+  </div>
+  </div>
+</footer>

@@ -9,6 +9,7 @@
   border-radius:35vh;
   padding-top: 2vh;
   margin-left: 12vh;
+
 }
 .profile-section h3
 {
@@ -38,4 +39,73 @@
   padding-bottom: 2vh;
   padding-left: 2vh;
   padding-right: 2vh;
+}
+.card img
+{
+   height: 45vh;
+    width: 65vh;
+    margin-top: 6.5vh;
+    margin-bottom: 3.5vh;
+    margin-left: 1.5vh;
+}
+.ad-section
+{
+  margin-top: 5vh;
+}
+.card-body
+{
+  padding-top: 7.5vh;
+}
+.card
+{
+  margin-right: 4vh;
+  margin-left: 4vh;
+}
+.main-body h3
+{
+  text-align: center;
+  padding-top: 3.5vh;
+
+}
+#footer
+{
+  margin-top: 35vh;
+  background: black;
+}
+#footer h5
+{
+  text-align: center;
+  color: white;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+}
+#footer h4
+{
+  color: white;
+  text-align: center;
+  padding-top: 4.5vh;
+}
+#footer p
+{
+  color: white;
+  text-align: center;
+}
+
+.social-media a:hover
+{
+  color:red;
+}
+.company-profile ul
+{
+  padding-top: 8.5vh;
+  padding-bottom: 4.5vh;
+}
+.social-media ul
+{
+  padding-top: 2.5vh;
+  padding-bottom: 4.5vh;
+}
+.social-media li
+{
+  margin-right: 2.5vh;
 }
