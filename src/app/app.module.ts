@@ -11,6 +11,8 @@ import { PanelComponent } from './components/panel/panel.component';
 import { SearchComponent } from './components/search/search.component';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { MessagingService} from './services/messaging.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     SignupComponent,
     PanelComponent,
     SearchComponent,
-    ProfileComponent
+    ProfileComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MessagingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
