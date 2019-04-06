@@ -12,11 +12,14 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/login" *ngIf="!userAuthenticated">Login</a>
       </li>
+      <li class="nav-item" >
+        <button type="button" *ngIf="userAuthenticated" class="btn btn-dark" name="button" (click)="messageDirect()">Messages:- &nbsp;<span class="badge badge-light">{{tmessage}}</span></button>
+      </li>
       <li class="nav-item" *ngIf="!userAuthenticated">
         <a class="nav-link" routerLink="/signup">Register</a>
       </li>
-      <li class="nav-item" *ngIf="userAuthenticated">
-        <a class="nav-link" routerLink="/panel">Profile</a>
+      <li class="nav-item" >
+        <a class="nav-link"  *ngIf="userAuthenticated" routerLink="/panel">Profile</a>
       </li>
       </ul>
   </div>
