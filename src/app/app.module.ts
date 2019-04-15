@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MessagingService} from './services/messaging.service';
+import { ComProfileComponent } from './components/com-profile/com-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { MessagingService} from './services/messaging.service';
     PanelComponent,
     SearchComponent,
     ProfileComponent,
-    MessagesComponent
+    MessagesComponent,
+    ComProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { MessagingService} from './services/messaging.service';
     NgbModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [MessagingService],
   bootstrap: [AppComponent]

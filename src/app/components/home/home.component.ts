@@ -14,9 +14,7 @@ export class HomeComponent implements OnInit {
     {
       this.userAuthenticated=true;
       const id=this.service.currentUserValue.id;
-      this.mService.getMessageCount(id).subscribe(res=>{
-        this.tmessage=res.result;
-      });
+      window.setInterval(()=>this.getMessages(id),5);
 
     }
   }
@@ -24,5 +22,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
   }
-
+    getMessages(id):any
+    {
+      this.mService.getMessageCount(id).subscribe(res=>{
+        this.tmessage=res.result;
+      });
+    }
 }

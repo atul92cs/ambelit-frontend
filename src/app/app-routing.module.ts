@@ -6,13 +6,14 @@ import {SignupComponent} from './components/signup/signup.component';
 import {PanelComponent} from './components/panel/panel.component';
 import {ProfileComponent} from './components/profile/profile.component';
 import {MessagesComponent} from './components/messages/messages.component';
+import {LoginGuard} from './guards/login.guard';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
-  {path:'panel',component:PanelComponent},
-  {path:'profile',component:ProfileComponent},
-  {path:'messages',component:MessagesComponent}
+  {path:'panel',component:PanelComponent,canActivate:[LoginGuard]},
+  {path:'profile',component:ProfileComponent,canActivate:[LoginGuard]},
+  {path:'messages',component:MessagesComponent,canActivate:[LoginGuard]}
 ];
 
 @NgModule({
