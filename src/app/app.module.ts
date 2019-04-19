@@ -15,6 +15,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MessagingService} from './services/messaging.service';
 import { ComProfileComponent } from './components/com-profile/com-profile.component';
+import {MatInputModule,MatStepperModule,MatButtonModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,10 @@ import { ComProfileComponent } from './components/com-profile/com-profile.compon
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatStepperModule,
+    MatButtonModule
   ],
   providers: [MessagingService],
   bootstrap: [AppComponent]
