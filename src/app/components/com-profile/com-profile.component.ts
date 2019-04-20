@@ -23,6 +23,7 @@ export class ComProfileComponent implements OnInit {
     createprofileForm()
     {
       this.profileForm=this.formBuilder.group({
+        id:['',Validators.required],
         name:['',Validators.required],
         phone:['',Validators.required],
         email:['',Validators.required],
@@ -30,7 +31,15 @@ export class ComProfileComponent implements OnInit {
         picture:['',Validators.required]
       });
     }
+    completeProfile(id,name,phone,email,location,picture)
+    {
+      this.uService.updateUserdetails(id,name,phone,email,location,picture).subscribe(res=>{
 
+      },err=>{
+
+      });
+
+    }
     createskillForm()
     {
       this.skillForm=this.formBuilder.group({
@@ -60,6 +69,7 @@ export class ComProfileComponent implements OnInit {
     {
         this.uService.getUserDetails(id).subscribe(res=>{
           this.profileForm.setValue({
+            id:res.user.id,
             name:res.user.Name,
             phone:res.user.Phone,
             email:res.user.Email,

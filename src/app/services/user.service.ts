@@ -10,7 +10,7 @@ import{map} from 'rxjs/operators';
 })
 export class UserService {
     readonly apiUrl='http://localhost:8080/user/';
-    
+
 
   constructor(private http:HttpClient) {
 
@@ -20,5 +20,15 @@ export class UserService {
   {
     return this.http.get<any>(this.apiUrl+id);
   }
-
+   updateUserdetails(id,name,phone,email,location,picture)
+   {
+    const userData={
+      name:name,
+      phone:phone,
+      email:email,
+      location:location,
+      picture:picture
+    }
+     return this.http.put<any>(this.apiUrl+'update/'+id,userData);
+   }
 }
