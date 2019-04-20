@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import{FormGroup,FormBuilder,FormArray,Validators} from '@angular/forms';
 import {LoginService} from '../../services/login.service';
 import {SubcategoryService} from '../../services/subcategory.service';
+import {UserService} from '../../services/user.service';
 @Component({
   selector: 'app-com-profile',
   templateUrl: './com-profile.component.html',
@@ -11,12 +12,13 @@ export class ComProfileComponent implements OnInit {
    profileForm:FormGroup;
    skillForm:FormGroup;
    subcategory:any;
-  constructor(private service:LoginService,private formBuilder:FormBuilder,private subService:SubcategoryService) { }
+  constructor(private service:LoginService,private formBuilder:FormBuilder,private subService:SubcategoryService,private uService:UserService) { }
 
   ngOnInit() {
     this.createprofileForm();
     this.createskillForm();
     this.loadsubcategories();
+    this.generateId();
   }
     createprofileForm()
     {
@@ -28,6 +30,7 @@ export class ComProfileComponent implements OnInit {
         picture:['',Validators.required]
       });
     }
+
     createskillForm()
     {
       this.skillForm=this.formBuilder.group({
@@ -48,9 +51,22 @@ export class ComProfileComponent implements OnInit {
     {
       (<FormArray>this.skillForm.get('skills')).removeAt(id);
     }
-    loaduserData()
+    generateId()
     {
-
+      const id=this.service.currentUserValue.id;
+      this.loaduserData(id);
+    }
+    loaduserData(id)
+    {
+        this.uService.getUserDetails(id).subscribe(res=>{
+          this.profileForm.setValue({
+            name:res.user.Name,
+            phone:res.user.Phone,
+            email:res.user.Email,
+            location:res.user.Location,
+            picture:res.user.Picture
+          });
+        });
     }
     loadsubcategories()
     {
