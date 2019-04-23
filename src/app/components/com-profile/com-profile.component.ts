@@ -3,6 +3,7 @@ import{FormGroup,FormBuilder,FormArray,Validators} from '@angular/forms';
 import {LoginService} from '../../services/login.service';
 import {SubcategoryService} from '../../services/subcategory.service';
 import {UserService} from '../../services/user.service';
+import {SkillService} from '../../services/skill.service';
 @Component({
   selector: 'app-com-profile',
   templateUrl: './com-profile.component.html',
@@ -12,7 +13,7 @@ export class ComProfileComponent implements OnInit {
    profileForm:FormGroup;
    skillForm:FormGroup;
    subcategory:any;
-  constructor(private service:LoginService,private formBuilder:FormBuilder,private subService:SubcategoryService,private uService:UserService) { }
+  constructor(private service:LoginService,private formBuilder:FormBuilder,private subService:SubcategoryService,private uService:UserService,private sService:SkillService) { }
 
   ngOnInit() {
     this.createprofileForm();
@@ -43,7 +44,7 @@ export class ComProfileComponent implements OnInit {
     createskillForm()
     {
       this.skillForm=this.formBuilder.group({
-        skills:this.formBuilder.array([this.createskillFeild()])
+        skills:this.formBuilder.array([this.createskillFeild()],Validators.minLength(1),Validators.maxLength(5))
       });
     }
     addskillFeild()
@@ -53,7 +54,7 @@ export class ComProfileComponent implements OnInit {
     createskillFeild():FormGroup
     {
       return this.formBuilder.group({
-        skill:['',Validators.required]
+        skills:['',Validators.required]
       });
     }
     deleteSkill(id:number)
@@ -85,5 +86,19 @@ export class ComProfileComponent implements OnInit {
       },err=>{
 
       });
+    }
+    addingSkill()
+    {
+      let skillArr=this.skillForm.get('skills') as FormArray;
+      let skillAr=skillArr.controls.map(skill=>skill.value);
+      const id=this.service.currentUserValue.id;
+      for(let i=0;i<skillAr.length;i++)
+      {
+          this.sService.addskills(id,skillAr[i].skills).subscribe(res=>{
+            console.log('skill added');
+          },err=>{
+
+          });
+      }
     }
 }

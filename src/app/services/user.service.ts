@@ -31,4 +31,5 @@ export class UserService {
     }
      return this.http.put<any>(this.apiUrl+'update/'+id,userData);
    }
+   
 }
