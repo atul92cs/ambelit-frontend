@@ -31,7 +31,7 @@
   </mat-step>
   <mat-step [stepControl]="skillForm" editable="false">
     <div class="row" id="add-section">
-      <button type="button" class="btn btn-primary" name="button" (click)="addskillFeild()">Add Skill</button>
+      <button type="button" class="btn btn-primary" *ngIf="skillForm.get('skills').length<5" name="button" (click)="addskillFeild()">Add Skill</button>
     </div>
     <form [formGroup]="skillForm">
     <div class="row" formArrayName="skills" *ngFor="let skill of skillForm.get('skills').controls;let i=index">
@@ -58,5 +58,8 @@
   </mat-step>
     <mat-step editable="false">
     <h3>Profile completed ! we will get back to you soon</h3>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+      <button type="button" class="btn btn-primary" name="button">Home</button>
+    </div>
     </mat-step>
   </mat-horizontal-stepper>

@@ -44,7 +44,7 @@ export class ComProfileComponent implements OnInit {
     createskillForm()
     {
       this.skillForm=this.formBuilder.group({
-        skills:this.formBuilder.array([this.createskillFeild()],Validators.minLength(1),Validators.maxLength(5))
+        skills:this.formBuilder.array([this.createskillFeild()],[Validators.minLength(1),Validators.maxLength(5)])
       });
     }
     addskillFeild()
