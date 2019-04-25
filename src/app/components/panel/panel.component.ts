@@ -28,7 +28,7 @@ export class PanelComponent implements OnInit {
    generateId()
    {
      const id =this.service.currentUserValue.id;
-     console.log(id);
+    
      this.generateDetails(id);
       this.getAds(id);
    }

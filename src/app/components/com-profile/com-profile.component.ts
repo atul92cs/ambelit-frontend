@@ -4,6 +4,7 @@ import {LoginService} from '../../services/login.service';
 import {SubcategoryService} from '../../services/subcategory.service';
 import {UserService} from '../../services/user.service';
 import {SkillService} from '../../services/skill.service';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-com-profile',
   templateUrl: './com-profile.component.html',
@@ -13,7 +14,7 @@ export class ComProfileComponent implements OnInit {
    profileForm:FormGroup;
    skillForm:FormGroup;
    subcategory:any;
-  constructor(private service:LoginService,private formBuilder:FormBuilder,private subService:SubcategoryService,private uService:UserService,private sService:SkillService) { }
+  constructor(private router:Router,private service:LoginService,private formBuilder:FormBuilder,private subService:SubcategoryService,private uService:UserService,private sService:SkillService) { }
 
   ngOnInit() {
     this.createprofileForm();
@@ -100,5 +101,9 @@ export class ComProfileComponent implements OnInit {
 
           });
       }
+    }
+    navigateHome()
+    {
+      this.router.navigate(['/panel']);
     }
 }
