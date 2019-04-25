@@ -27,9 +27,10 @@
            <img [src]="profile?.user.Picture" alt="Profile-picture">
          </div>
          <div class="col-md-9 col-sm-12 col-xs-12">
-            <h3>{{profile?.user.Name}}</h3>
-            <h4>{{profile?.user.Phone}}</h4>
-            <p class="leade">{{profile?.user.Location}}</p>
+            <h3>Name:- {{profile?.user.Name}}</h3>
+            <h4>Phone:-{{profile?.user.Phone}}</h4>
+            <p class="lead">Location:-{{profile?.user.Location}}</p>
+            <button type="button"class="btn btn-primary" name="button"><i class="fas fa-pencil-alt"></i> Edit</button>
          </div>
        </div>
      </div>
@@ -37,15 +38,17 @@
   </div>
   <div class="skill-details">
     <div class="container">
-
-
      <div class="card">
        <div class="card-header">
          <h4>User Skills</h4>
        </div>
        <div class="card-body">
          <ul class="list-group"  *ngFor="let data of skills?.result">
-           <li class="list-group-item">{{data.Name}}</li>
+           <li class="list-group-item d-flex  ">
+             <div class="mr-auto p-2">{{data.Name}}</div>
+              <div class="p-2"><button type="button" class="btn btn-primary " name="button"><i class="fas fa-pencil-alt"></i></button> &nbsp;<button type="button" class="btn btn-danger " name="button"><i class="fas fa-times "></i></button>
+               </div>
+            </li>
          </ul>
        </div>
      </div>
