@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {SkillService} from '../../services/skill.service';
 import {UserService} from '../../services/user.service';
 import {LoginService} from '../../services/login.service';
+import {MatDialog,MatDialogRef,MAT_DIALOG_DATA} from '@angular/material';
+import {ProfileModalComponent} from '../profile-modal/profile-modal.component';
+import {SkillModalComponent} from '../skill-modal/skill-modal.component';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -10,7 +13,7 @@ import {LoginService} from '../../services/login.service';
 export class ProfileComponent implements OnInit {
    profile:any;
    skills:any;
-  constructor( private sService:SkillService,private uService:UserService,private lService:LoginService ) { }
+  constructor( private sService:SkillService,private uService:UserService,private lService:LoginService,private dialog:MatDialog ) { }
 
   ngOnInit() {
     this.generateId();
@@ -32,6 +35,30 @@ export class ProfileComponent implements OnInit {
      this.sService.getSkill(id).subscribe(res=>{
        this.skills=res;
        console.log(res);
+     },err=>{});
+   }
+   editUser(id)
+   {
+     let matdialog=this.dialog.open(ProfileModalComponent,{
+       width:'600px',
+       data:id
+     }).afterClosed().subscribe(res=>{
+      this.generateId();
+     },err=>{});
+   }
+   editSkill(id)
+   {
+     let matdialog=this.dialog.open(SkillModalComponent,{
+       width:'600px',
+       data:id
+     }).afterClosed().subscribe(res=>{
+       this.generateId();
+     },err=>{});
+   }
+   deleteuserSkill(id)
+   {
+     this.sService.deleteSkill(id).subscribe(res=>{
+       this.generateId();
      },err=>{});
    }
 }

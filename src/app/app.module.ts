@@ -15,7 +15,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MessagingService} from './services/messaging.service';
 import { ComProfileComponent } from './components/com-profile/com-profile.component';
-import {MatInputModule,MatStepperModule,MatButtonModule} from '@angular/material';
+import {MatInputModule,MatStepperModule,MatButtonModule,MatDialogModule} from '@angular/material';
 import { ProfileModalComponent } from './components/profile-modal/profile-modal.component';
 import { SkillModalComponent } from './components/skill-modal/skill-modal.component';
 @NgModule({
@@ -42,9 +42,11 @@ import { SkillModalComponent } from './components/skill-modal/skill-modal.compon
     BrowserAnimationsModule,
     MatInputModule,
     MatStepperModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [MessagingService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[ProfileModalComponent,SkillModalComponent]
 })
 export class AppModule { }

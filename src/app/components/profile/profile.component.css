@@ -8,3 +8,22 @@
   margin-bottom: 3.5vh;
   border-radius: 1.5vh;
 }
+.user-details h3
+{
+  margin-top: 8.5vh;
+}
+.user-details
+{
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+.user-section
+{
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+.skill-add
+{
+  text-align: center;
+  margin-top: 1.5vh;
+}

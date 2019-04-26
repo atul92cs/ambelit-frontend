@@ -23,4 +23,19 @@ export class SkillService {
     }
     return this.http.get<Skills[]>(this.apiUrl+'/'+id);
   }
+  getuserSkill(id:string)
+  {
+    return this.http.get<any>(this.apiUrl+'/user/'+id);
+  }
+  updateSkill(id:string,skill:string)
+  {
+    const skillData={
+      skill:skill
+    }
+    return this.http.put<any>(this.apiUrl+'/'+id,skillData);
+  }
+  deleteSkill(id:string)
+  {
+    return this.http.delete<any>(this.apiUrl+'/'+id);
+  }
 }
