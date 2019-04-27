@@ -31,5 +31,14 @@ export class UserService {
     }
      return this.http.put<any>(this.apiUrl+'update/'+id,userData);
    }
-   
+   updateProfile(id,name,phone,location)
+   {
+     const userData={
+       name:name,
+       phone:phone,
+       location:location
+     }
+     return this.http.put<any>(this.apiUrl+id,userData);
+   }
+
 }

@@ -52,6 +52,10 @@ export class SkillModalComponent implements OnInit {
     {
       this.updateSkill.reset();
     }
+    cancelUpdate()
+    {
+      this.skillDialogRef.close();
+    }
     updateuserSkill(id,skill)
     {
       this.service.updateSkill(id,skill).subscribe(res=>{

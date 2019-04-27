@@ -49,13 +49,13 @@
        <div class="card-body">
          <ul class="list-group"  *ngFor="let data of skills?.result">
            <li class="list-group-item d-flex  ">
-             <div class="mr-auto p-2">{{data.Name}} &nbsp; </div>
+             <div class="mr-auto p-2">{{data.Name}}</div>
               <div class="p-2"><button type="button" class="btn btn-primary " name="button" (click)="editSkill(data.id)"><i class="fas fa-pencil-alt"></i></button> &nbsp;<button type="button" class="btn btn-danger " name="button" (click)="deleteuserSkill(data.id)"><i class="fas fa-times "></i></button>
                </div>
             </li>
          </ul>
          <div class="skill-add">
-           <button type="button" class="btn btn-primary" name="button">Add skill</button>
+           <button type="button" class="btn btn-primary" name="button" *ngIf="skills?.result.length<5" (click)="addskill(id)">Add skill</button>
          </div>
        </div>
      </div>

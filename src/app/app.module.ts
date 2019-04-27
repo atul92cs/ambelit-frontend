@@ -18,6 +18,7 @@ import { ComProfileComponent } from './components/com-profile/com-profile.compon
 import {MatInputModule,MatStepperModule,MatButtonModule,MatDialogModule} from '@angular/material';
 import { ProfileModalComponent } from './components/profile-modal/profile-modal.component';
 import { SkillModalComponent } from './components/skill-modal/skill-modal.component';
+import { AddskillModalComponent } from './components/addskill-modal/addskill-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { SkillModalComponent } from './components/skill-modal/skill-modal.compon
     MessagesComponent,
     ComProfileComponent,
     ProfileModalComponent,
-    SkillModalComponent
+    SkillModalComponent,
+    AddskillModalComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,6 @@ import { SkillModalComponent } from './components/skill-modal/skill-modal.compon
   ],
   providers: [MessagingService],
   bootstrap: [AppComponent],
-  entryComponents:[ProfileModalComponent,SkillModalComponent]
+  entryComponents:[ProfileModalComponent,SkillModalComponent,AddskillModalComponent]
 })
 export class AppModule { }
