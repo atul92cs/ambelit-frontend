@@ -1,0 +1,14 @@
+.main-body h2
+{
+  text-align: center;
+  margin-top: 3.5vh;
+  margin-bottom: 3.5vh;
+}
+.main-body
+{
+  border-radius: 4px;
+  border: 1px solid;
+  margin-left: 23.5vh;
+  margin-right: 23.5vh;
+  margin-top: 1.5vh;
+}

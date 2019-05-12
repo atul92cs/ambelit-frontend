@@ -22,7 +22,7 @@
        </select>
      </div>
      <div class="form-group">
-       <input type="text" name="picture" placeholder="Profile picture" formControlName="picture" #picture class="form-control" >
+       <input type="file" name="picture" placeholder="Profile picture" formControlName="picture" class="form-control-file" #picture >
      </div>
      <div class="form-group text-center">
        <button type="button" class="btn btn-primary" name="button" (click)="completeProfile(id.value,name.value,phone.value,email.value,location.value,picture.value)" matStepperNext>Complete profile</button>

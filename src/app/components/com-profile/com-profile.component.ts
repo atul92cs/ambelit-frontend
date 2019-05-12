@@ -36,7 +36,7 @@ export class ComProfileComponent implements OnInit {
     completeProfile(id,name,phone,email,location,picture)
     {
       this.uService.updateUserdetails(id,name,phone,email,location,picture).subscribe(res=>{
-
+                 
       },err=>{
 
       });

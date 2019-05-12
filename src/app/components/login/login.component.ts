@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
          this.resetForm();
        },err=>{
          this.resetForm();
-         this.message="INnvalid email or password";
+         this.message="Invalid email or password";
        });
     }
 }

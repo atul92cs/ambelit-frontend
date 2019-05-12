@@ -33,6 +33,7 @@ export class SignupComponent implements OnInit {
         {
           this.message="invalid details"
         }
+        else{
        this.service.registerUser(name,email,password).subscribe(res=>{
 
             this.message="User registered";
@@ -44,4 +45,5 @@ export class SignupComponent implements OnInit {
        });
 
    }
+ }
 }

@@ -19,6 +19,7 @@ import {MatInputModule,MatStepperModule,MatButtonModule,MatDialogModule} from '@
 import { ProfileModalComponent } from './components/profile-modal/profile-modal.component';
 import { SkillModalComponent } from './components/skill-modal/skill-modal.component';
 import { AddskillModalComponent } from './components/addskill-modal/addskill-modal.component';
+import { AdpostComponent } from './components/adpost/adpost.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { AddskillModalComponent } from './components/addskill-modal/addskill-mod
     ComProfileComponent,
     ProfileModalComponent,
     SkillModalComponent,
-    AddskillModalComponent
+    AddskillModalComponent,
+    AdpostComponent
   ],
   imports: [
     BrowserModule,

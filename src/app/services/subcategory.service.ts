@@ -12,4 +12,8 @@ export class SubcategoryService {
   {
     return this.http.get<Subcategory[]>(this.apiUrl);
   }
+  getsubcategory(id:number)
+  {
+    return this.http.get<Subcategory[]>(this.apiUrl+id);
+  }
 }
