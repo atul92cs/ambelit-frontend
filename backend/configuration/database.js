@@ -1,6 +1,6 @@
 const seqeulize=require('sequelize');
-module.exports=new seqeulize('I4gRGwXdhW','I4gRGwXdhW','gj1aOdAt5a',{
+module.exports=new seqeulize('I4gRGwXdhW','I4gRGwXdhW','QaRbUY5XNm',{
     host:'remotemysql.com',
     port:'3306',
-    dialcet:'mysql'
+    dialect:'mysql'
 });

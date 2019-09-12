@@ -20,6 +20,8 @@ import { ProfileModalComponent } from './components/profile-modal/profile-modal.
 import { SkillModalComponent } from './components/skill-modal/skill-modal.component';
 import { AddskillModalComponent } from './components/addskill-modal/addskill-modal.component';
 import { AdpostComponent } from './components/adpost/adpost.component';
+import { MessengerComponent } from './components/messenger/messenger.component';
+import {ChatService} from './services/chat.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { AdpostComponent } from './components/adpost/adpost.component';
     ProfileModalComponent,
     SkillModalComponent,
     AddskillModalComponent,
-    AdpostComponent
+    AdpostComponent,
+    MessengerComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,7 @@ import { AdpostComponent } from './components/adpost/adpost.component';
     MatButtonModule,
     MatDialogModule
   ],
-  providers: [MessagingService],
+  providers: [MessagingService,ChatService],
   bootstrap: [AppComponent],
   entryComponents:[ProfileModalComponent,SkillModalComponent,AddskillModalComponent]
 })
