@@ -24,7 +24,7 @@
     "@ng-bootstrap/ng-bootstrap": "^4.1.0",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "rxjs": "~6.3.3",
     "socket.io-client": "^2.2.0",
     "socket.io-frontend": "0.0.2",
